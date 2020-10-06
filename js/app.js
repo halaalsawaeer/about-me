@@ -35,8 +35,7 @@ if (ques4 === 'yes' || ques4 === 'y') {
     alert('CORRECT!');
     console.log('correct answer');
     console.log('Q4');
-} else if (ques4 === 'no' || ques4 === 'n')
-{
+} else if (ques4 === 'no' || ques4 === 'n') {
     console.log('no Q4')
     alert('You do not know Hala!');
     console.log('wrong answer');
@@ -50,4 +49,25 @@ if (ques5 === 'yes' || ques5 === 'y') {
     alert('Great! you know Hala Very Well!');
     console.log('correct answer');
 }
+var myage = 24;
+var ques6 = prompt('what is my age?')
+
+for (var i = 0; i <= 6; i++) {
+    if (ques6 > myage) {
+        alert('too high');
+    }
+    else if (ques6 < myage) {
+        alert('too low');
+    }
+
+    else {
+        alert('you are right')
+    }
+
+}
+
+
+
+
+
 

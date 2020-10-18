@@ -99,4 +99,4 @@ function country() {
 country();
 
 alert('Countries That I wish to visit : Lebanon , Mexico, Turkey, Egypt, Tunisia, UAE, KSA, Kuwait, USA') ;
-alert('You scored ' + score + ' out of 7 on this quiz. Hope you enjoyed it!');
+alert(' You scored ' + score + ' out of 7 on this quiz. Hope you enjoyed it!');

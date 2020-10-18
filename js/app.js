@@ -1,128 +1,102 @@
-'use strict';
+'use strict'
 var score = 0;
-function username1() {
-    var username = prompt('What is your name?');
-    alert('Welcome' + ' ' + username);
+var userName = " ";
+function getName(fName, sName) {
+
+    fName = prompt(' What is your name? ');
+    
+    userName = [fName];
+    alert('Welcome ' + fName )
+    return userName;
 }
-username1();
-
-function q1() {
-var ques1 = prompt('does Hala smoke cigaretes?').toLowerCase();
-
-if (ques1 === 'yes' || ques1 === 'y') {
-    alert("wrong answer no i don't");
-    console.log('wrong answer');
-
-} else if (ques1 === "no" || ques1 === 'n') {
-    alert("correct answer");
-    console.log('correct answer');
-    score++;
-}
-}
-q1() ;
-
-function q2() {
-var ques2 = prompt('Does Hala love Kofta?').toLowerCase();
-if (ques2 === 'yes' || ques2 === 'y') {
-    alert('Wrong , Hala hates it');
-    console.log('wrong answer');
-} else if (ques2 === 'no' || ques2 === 'n') {
-    alert('CORRECT!');
-    console.log('correct answer')
-    score++;
-}
-}
-q2() ;
-
-function q3() {
-
-var ques3 = prompt('Does Hala speak french?').toLowerCase();
-if (ques3 === 'yes' || ques3 === 'y') {
-    alert('wrong answer!');
-    console.log('wrong answer!');
-} else if (ques3 === 'no' || ques3 === 'n') {
-    alert('correct!');
-    console.log('correct!');
-    score++;
-}
-}
-q3() ;
-
-function q4() {
-
-var ques4 = prompt('Does Hala Love Karshat?').toLowerCase();
-if (ques4 === 'yes' || ques4 === 'y') {
-    alert('CORRECT!');
-    console.log('correct answer');
-    console.log('Q4');
-    score++;
-
-} else if (ques4 === 'no' || ques4 === 'n') {
-    console.log('no Q4')
-    alert('You do not know Hala!');
-    console.log('wrong answer');
-}
-} 
-q4() ;
-
-function q5() {
-
-var ques5 = prompt('does Hala love cats?').toLowerCase();
-if (ques5 === 'yes' || ques5 === 'y') {
-    alert('Wrong answer!');
-    console.log('wrong answer');
-} else if (ques5 === 'no' || ques5 === 'n') {
-    alert('Great! you know Hala Very Well!');
-    console.log('correct answer');
-    score++;
-}
-} 
-q5() ;
+getName();
 
 
 
-function theage() {
-    var myage = 24;
-    var ques6 = prompt('what is my age?')
+function question1() {
+    var food1 = prompt('Does Hala Loves Kofta?').toLowerCase();
 
-    for (var i = 0; i <= 6; i++) {
-        if (ques6 > myage) {
-            alert('too high');
-        }
-        else if (ques6 < myage) {
-            alert('too low');
-        }
+    if (food1 == 'yes' || food1 == 'Y' || food1 == 'y') {
+        alert('NO!, Hala Hates It!');
 
-        else {
-            alert('you are right');
-            score++;
-        }
-    }
-    theage();
+        score++;
+    } else if (food1 == 'no' || food1 == 'N' || food1 == 'n') {
+        alert('Hala Hates Kofta');
 
-
-     var mydish = ["karshat", "mansaf", "magloba", "pizza", "grapes leafs", "mlokhea", "natural vegetable soup", "machbos", "zinger", "chicken with cream"];
-
-
-    for (var j = 1; j <= 6; j++) { var Topten = prompt('what do you think are my favourite food?') }; toLowerCase();
-    for (var i = 0; i <= mydish.lenghth; i++) {
-        if (Topten === mydish[i]) {
-            alert('You are correct!');
-            score++;
-            j = 10;
-            breake;
-        }
     }
 }
 
+question1();
+
+function question2() {
+    var ksa = prompt('Does Hala Loves Karshat?').toLowerCase();
+    if (ksa == 'yes' || ksa == 'Y' || ksa == 'y') {
+        alert('You are  correct!');
+    } else if (ksa == 'no' || ksa == 'N' || ksa == 'n') {
+        alert('opps! I am in Love with Karshat!');
+        score++;
+    }
+}
+
+question2();
+
+function question3() {
+    var cats = prompt('Does Hala Love cats?').toLowerCase();
+    if (cats == 'yes' || cats == 'Y' || cats == 'y') {
+        alert('Yes, I do love them!');
+        score++;
+    } else if (cats == 'no' || cats == 'N' || cats == 'n') {
+        alert('Sorry! You are wrong!');
+    }
+}
+question3();
+
+function smokes() {
+    var smoke = prompt('Does Hala smokes?').toLowerCase();
+    if (smoke== 'yes' || smoke == 'Y' || smoke == 'y') {
+        alert('No!! !');
+    } else if (smoke == 'no' || smoke == 'N' || smoke == 'n') {
+        alert('You are totally right!');
+        score++;
+    }
+}
+smokes();
+function age() {
+    for (var i = 0; i < 5; i++) {
+        var realage = prompt('How old am I?');
+        if (realage == 24) {
+            alert('You are correct!')
+            score++;
+            break;
+        } else if (realage > 24) {
+            alert('Too High!')
+        } else if (realage < 24) {
+            alert('Too Low!')
+        }
+    }
+
+}
+
+age();
+var correctanswer = ['Lebanon', 'Mexico', 'Turkey', 'Egypt', 'Tunisia', 'UAE', 'KSA', 'Kuwait', 'USA'];
 
 
-
-alert('my favourite food is the folowing : karshat, mansaf, magloba, pizza, grapes leafs, mlokhea, natural vegetable soup, machbos, zinger, chicken with cream.');
-
-alert('you scored ' + score + ' out of 7');
-
+function country() {
+    for (var j = 1; j <= 6; j++) {
+        var topten = prompt('What Countries Does Hala want to visit?');
 
 
+        for (var i = 0; i <= correctanswer.length; i++) {
+            if (topten === correctanswer[i]) {
+                alert('You are correct!');
+                score++;
+                j = 10;
+                break;
+            }
+        }
+    }
+}
+country();
 
-
+alert('Countries That I wish to visit : Lebanon , Mexico, Turkey, Egypt, Tunisia, UAE, KSA, Kuwait, USA') ;
+alert('You scored ' + score + ' out of 7 on this quiz. Hope you enjoyed it!');
